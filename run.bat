@@ -18,7 +18,7 @@ if %errorlevel% == 0 (
 
 set /P choice= "--- Would you like to install selenium right now [y/n] "
 if /I "%choice%" EQU "y" (
-    pip install selenium
+    pip install -r requirements.txt
     goto :run
 ) else if /I "%choice%" EQU "n" (
     goto :EOF
