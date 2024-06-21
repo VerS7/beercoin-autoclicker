@@ -23,6 +23,7 @@ class AutoClicker:
         """
         self._options = webdriver.ChromeOptions()
         self._options.add_argument(f"user-data-dir={cookie_path}")
+        self._options.add_experimental_option('excludeSwitches', ['enable-logging'])
         self.driver = webdriver.Chrome(options=self._options)
         self.wait = WebDriverWait(self.driver, 20)
 
